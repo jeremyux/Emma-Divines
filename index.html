@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Emma Divines</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/qfg2iqz.css">
+        <link rel="assets" href="assets">
+    </head>
+    <body>
+    <section>
+        <header>
+            <div class="logo"><a href=""></a>
+            </div>
+            <div class="navigation">
+                <a href="" class="hover-state" id="active">Home</a>
+                <a href="" class="hover-state" >About me</a>
+                <a href="" class="main-cta btn">Schedule a call</a>
+            </div>
+        </header>
+            <div class="content">
+                <div class="info">
+                    <h1>See Into Your Future, So You Can Be Present </h1>
+                    <p class="subtext">I can help you unlock your best self by helping guide you towards your goals through insights and empathy</p>
+                    <a href="" style="color: #7c5ea8;" class="main-cta">Schedule a call</a>
+                </div>        
+                <div class="tarot">
+                    <div style="display: inline;">
+                        <img class="float1" src="assets/owl.svg"  style="max-height: 300px;">   
+                    </div>
+                    <div style="display: inline;">
+                        <img class="float2" src="assets/unicorn.svg" style="max-height: 300px;">   
+                    </div>
+                </div>
+            </div>    
+
+
+        <div class="slider row">
+            <div class="column">
+                <ul>
+                    <li class="indicator active" id="dot1" onclick="change1()"></li>
+                    <li class="indicator" id="dot2" onclick="change2()"></li>
+                    <li class="indicator" id="dot3" onclick="change3()"></li>
+                </ul>
+            </div>
+            <div class="column" id="slide">
+                <div class="quote-card"> 
+                    <blockquote>“Emma helped me realize my potential in my work but also helped me navigate through some 
+                        questionable relationship situations.”     
+                    </blockquote>
+                    <div class="testimonial">
+                        <img src="assets/jeremy.png" class="avatar">
+                        <p>Jeremy Lenguyen</p>
+                    </div>
+                </div>
+                <div class="quote-card"> 
+                    <blockquote>“I don't know what I'd do without Emma's guidance. She has been very generous with her time and insights.”     
+                    </blockquote>
+                    <div class="testimonial">
+                        <img src="assets/heather.png" class="avatar">
+                        <p>Heather Hanley</p>
+                    </div>
+                </div>
+                <div class="quote-card"> 
+                    <blockquote>“Definitely check out her sound bath sessions as well. You will fall into REM state.”     
+                    </blockquote>
+                    <div class="testimonial">
+                        <img src="assets/dana.png" class="avatar">
+                        <p>Dana Axelsen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var dot1 = document.getElementById("dot1");
+        var dot2 = document.getElementById("dot2");
+        var dot3 = document.getElementById("dot3");
+        var slide = document.getElementById("slide");
+        var indicator = document.getElementsByClassName("indicator");
+        var active = document.getElementsByClassName("active");
+
+
+        function change1() {
+            var slide = document.getElementById("slide");
+            dot1.onClick = slide.style.transform = "translateY(0px)";
+            dot1.classList.add("active");
+            dot2.classList.remove("active");
+            dot3.classList.remove("active");
+        }
+        function change2() {
+            var slide = document.getElementById("slide");
+            dot2.onClick = slide.style.transform = "translateY(-184px)";
+            dot1.classList.remove("active");
+            dot2.classList.add("active");
+            dot3.classList.remove("active");
+        }
+        function change3() {
+            var slide = document.getElementById("slide");
+            dot3.onClick = slide.style.transform = "translateY(-368px)";
+            dot1.classList.remove("active");
+            dot2.classList.remove("active");
+            dot3.classList.add("active");
+        }
+        var testimonialArray = [change1,change2,change3];
+        for (var i = 0; i < testimonialArray.length; ++i); {
+            testimonialArray[i]();
+        }
+    </script>
+
+    </body>
+
+</html>
